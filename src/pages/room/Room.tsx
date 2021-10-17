@@ -1,5 +1,5 @@
 import { FormEvent, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useHistory, useParams } from "react-router-dom";
 import logoImg from "../../assets/images/logo.svg";
 import { Button } from "../../components/button";
 import { Question } from "../../components/question";
@@ -15,6 +15,7 @@ type RoomParams = {
 };
 
 export function Room() {
+  const history = useHistory();
   const { user } = useAuth();
   const params = useParams<RoomParams>();
   const [newQuestion, setNewQuestion] = useState("");
@@ -47,6 +48,10 @@ export function Room() {
     setNewQuestion("");
   }
 
+  function handleNavigateToAdminRoom() {
+    history.push(`/admin/rooms/${roomId}`);
+  }
+
   async function handleLikeQuestion(
     questionId: string,
     likedId: string | undefined
@@ -67,6 +72,12 @@ export function Room() {
       <header>
         <div className="content">
           <img src={logoImg} alt="Letmeask" />
+          <button
+            className="button-navigator"
+            onClick={handleNavigateToAdminRoom}
+          >
+            Gerenciar
+          </button>
 
           <RoomCode code={roomId} />
         </div>
@@ -76,7 +87,6 @@ export function Room() {
         <div className="room-title">
           <header>
             <h1>Sala {title}</h1>
-          
 
             {questions.length > 0 && (
               <span className="question-amount">

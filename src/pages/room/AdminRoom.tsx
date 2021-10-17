@@ -22,6 +22,10 @@ export function AdminRoom() {
   const roomId = params.id;
   const { questions, title } = useRoom(roomId);
 
+  function handleNavigateToRoom() {
+    history.push(`/rooms/${roomId}`);
+  }
+
   async function handleEndRoom() {
     await database.ref(`rooms/${roomId}`).update({
       endedAt: new Date(),
@@ -53,9 +57,8 @@ export function AdminRoom() {
       <header>
         <div className="content">
           <img src={logoImg} alt="Letmeask" />
-          <div>
-            <RoomCode code={roomId} />
-          </div>
+          <button className="button-navigator" onClick={handleNavigateToRoom}>Voltar</button>
+          <RoomCode code={roomId} />
         </div>
       </header>
 

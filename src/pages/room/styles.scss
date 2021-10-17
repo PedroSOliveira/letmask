@@ -34,6 +34,15 @@ $white: #fff;
   align-items: center;
   padding: 1rem;
   border-bottom: solid 1px #e2e2e2;
+
+
+  .button-navigator {
+    padding: 0.5rem;
+    background: $purple;
+    border-radius: 0.5rem;
+    border: 0;
+    color: $white;
+  }
 }
 
 main {
