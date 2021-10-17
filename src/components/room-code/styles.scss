@@ -1,0 +1,54 @@
+$purple: #835afd;
+$red: #ea4335;
+$background: #f8f8f8;
+$light: #dbdcdd;
+$text-color: #29292e;
+
+.room-code {
+  height: 2.75rem;
+  display: flex;
+  align-items: center;
+  border: 1px solid $purple;
+  border-start-start-radius: 0.3rem;
+  border-top-right-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+  background-color: white;
+
+  div {
+    height: 100%;
+    padding: 0 0.5rem;
+    background-color: $purple;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-start-start-radius: 0.25rem;
+  }
+
+  span {
+    padding: 0.25rem 0.75rem;
+    font-weight: 400;
+    color: $text-color;
+  }
+
+  transition: filter 0.2s;
+
+  &:hover {
+    filter: brightness(0.9);
+  }
+
+  @media(max-width: 450px) {
+    background-color: $purple;
+    overflow: hidden;
+    font-size: 1.25em;
+    padding: 0 0.75rem;
+    border-radius: 0.5em;
+
+    button {
+      width: 8rem;
+    }
+
+    span {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,41 @@
+$purple: #835afd;
+$white: #fff;
+
+.button {
+  max-width: 100%;
+  height: 50px;
+
+  padding: 0 2rem;
+  margin-top: 1rem;
+
+  font-weight: 500;
+
+  background-color: $purple;
+  color: $white;
+
+  border: 0;
+  border-radius: 1rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transition: filter 0.2s;
+
+  &.outlined {
+    background: $white;
+    border: 1px solid $purple;
+    color: $purple;
+  }
+
+  &:not(:disabled):hover { 
+      filter: brightness(0.9);
+  }
+
+
+  &:disabled { 
+      opacity: 0.6;
+      cursor: not-allowed;
+  }
+
+}
