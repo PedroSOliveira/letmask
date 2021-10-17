@@ -1,46 +1,65 @@
-# Getting Started with Create React App
+# Aplicação
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+![letmeask](https://user-images.githubusercontent.com/37816505/137632661-48a472a3-4f4f-4797-8c75-ac6bbf9b52d9.png)
 
-In the project directory, you can run:
+# Tecnologias
+As tecnologias que foram usadas para desenvolver essa aplicação:
 
-### `yarn start`
+* [React](https://reactjs.org/)
+* [Firebase](https://firebase.google.com/)
+* [TypeScript](https://www.typescriptlang.org/)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+# Como executar
+Clone o projeto e acesse a pasta onde foi clonado.
+Para iniciá-lo usando o **yarn**, siga os passos abaixo:
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+```
+# Instalar as dependências com yarn 
+$ yarn
+# Iniciar o projeto
+$ yarn start
+```
 
-### `yarn test`
+Para iniciá-lo usando o **npm**, siga os passos abaixo:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```
+# Instalar as dependências com npm 
+$ npm install
+# Iniciar o projeto
+$ npm start
+```
+A aplicação rodará no seu browser pelo endereço http://localhost:3000.
+Atenção ao **Firebase** para rodar a aplicaão, pois é preciso inserir seus dados nas variáveis de ambiente.
 
-### `yarn build`
+# Firebase
+Uma sugestão se tiver dificuldade com as variáveis de ambiente é criar um arquivo com o nome: **_.env.local_**.
+Em seguida insrira seus dados da sua conta do **firebase** aproximadamente assim:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```
+REACT_APP_API_KEY="MY_API_KEY"
+REACT_APP_AUTH_DOMAIN="MY_AUTH_DOMAIN"
+REACT_APP_DATABASE_URL="MY_DATABASE_URL"
+REACT_APP_PROJECT_ID="MY_PROJECT_ID"
+REACT_APP_STORAGE_BUCKET="MY_STORAGE_BUCKET"
+REACT_APP_MESSAGING_SENDER_ID="MY_MESSAGING_SENDER_ID"
+REACT_APP_APP_ID="MY_APP_ID"
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+# PROJETO
+Letmeask é uma aplicação desenvolvida pela [Rocketseat](https://www.rocketseat.com.br/), onde eu apenas repliquei para consolidar e adquirir novos conhecimentos. Adicionei mais algumas funcionalidades.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+# Layout
+É possível ter acesso ao **layout** do projeto através do link abaixo
+* [Layout](https://www.figma.com/community/file/1009824839797878169/Letmeask)
 
-### `yarn eject`
+Lembrando que é preciso ter uma conta no [Figma](http://figma.com/) e é sugerido que duplique o projeto no **Figma**.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+# Aplicação
+Aplicação que é possível realizar login pelo **GOOGLE** usando **_api_** do Firebase. O objetivo é criar salas sobre determinada categoria onde os usuaŕios poderão realizar perguntas, curtir, remover e marcar como lida as perguntas. O criador da sala no entanto é o único a poder realizar ações como encerrar a sala, marcar perguntas como lidas e removê-las.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+A aplicação está responsiva e também possui os modos de tela noturno, onde caso seja ativado a tela fica com as cores mais escuras. Uma demonstração da **responsividade** e do **dark mode** abaixo gravada por um dispositivo móvel:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Obs: **A demonstração está assim pela qualidade do gif**
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+![letmeask (1)](https://user-images.githubusercontent.com/37816505/137633184-c5b660e6-6d5d-4dff-b9bb-44a012cd951f.gif)
